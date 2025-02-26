@@ -1,13 +1,10 @@
-
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate, Link } from "react-router-dom";
-import './../styles/App.css';
 import Home from "./Home";
 import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
 
-const App = () => {
-
+function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
@@ -27,8 +24,8 @@ const App = () => {
           <Route path="/playground" element={<PrivateRoute isAuth={isAuthenticated}><Playground /></PrivateRoute>} />
         </Routes>
       </div>
-  </Router>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
